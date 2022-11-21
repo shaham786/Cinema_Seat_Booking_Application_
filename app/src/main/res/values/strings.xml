@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">FigmaPracticeApp</string>
+    <string name="home_screen">Home\nScreen</string>
+    <string name="movie_ticket">Movie\nTicket</string>
+    <string name="movie_tickets">Movie Tickets</string>
+    <string name="lahore">Lahore</string>
+    <string name="all_cinema">All Cinema</string>
+    <string name="all_movies">All Movies</string>
+    <string name="search_movie_by_name">Search movie by name</string>
+    <string name="select_and_book_the_movie_of_your_choice">Select and Book the movie of your choice</string>
+    <string name="movie_title">Movie Title</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="book_yourself_the_seat_you_desire">Book yourself the seat you desire</string>
+    <string name="select_seat_s">Select Seat(s)</string>
+    <string name="screen">Screen</string>
+    <string name="unavailable">Unavailable</string>
+    <string name="available">Available</string>
+    <string name="your_seats">Your Seats</string>
+    <string name="action_thriller">Action/Thriller</string>
+    <string name="tenet">Tenet</string>
+    <string name="schedule1">Schedule</string>
+    <string name="about_movie1">About Movie</string>
+    <string name="schedule">Schedule</string>
+    <string name="about_movie">About Movie</string>
+    <string name="review_details">Review Details</string>
+    <string name="tickets_amount">Tickets Amount</string>
+    <string name="rs_1_500_00">Rs.1,500.00</string>
+    <string name="movie">Movie</string>
+
+</resources>

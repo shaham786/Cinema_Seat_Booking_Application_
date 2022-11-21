@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_51sdp"
+    android:layout_height="@dimen/_51sdp"
+    app:cardElevation="@dimen/_1sdp"
+    android:layout_marginEnd="@dimen/_10sdp"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_date_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="23"
+        android:fontFamily="@font/work_sans_vf"
+        android:layout_marginTop="-15dp"
+        android:textColor="@color/dark_grey"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_date_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tue"
+        android:textColor="@color/dark_grey"
+
+        android:fontFamily="@font/work_sans_vf"
+        app:layout_constraintTop_toBottomOf="@id/tv_date_1"
+        app:layout_constraintStart_toStartOf="@id/tv_date_1"
+        app:layout_constraintEnd_toEndOf="@id/tv_date_1"
+
+
+        />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+</com.google.android.material.card.MaterialCardView>
+
+</layout>

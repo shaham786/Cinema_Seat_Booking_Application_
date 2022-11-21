@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="@dimen/_126sdp"
+        android:layout_height="@dimen/_228sdp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:cardCornerRadius="@dimen/_13sdp"
+        app:cardElevation="0dp"
+        android:elevation="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_13sdp"
+        android:background="#00FFFFFF"
+
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_cardview_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_179sdp"
+                android:background="@color/black"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_movie_title"
+                android:layout_width="@dimen/_106sdp"
+                android:layout_height="@dimen/_33sdp"
+                android:text="@string/movie_title"
+                android:textSize="@dimen/_11sdp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:fontFamily="@font/work_sans_vf"
+                android:textStyle="bold"
+                android:textColor="#161616"
+                app:layout_constraintTop_toBottomOf="@id/iv_cardview_layout"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ellipse1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_43sdp"
+                android:layout_marginEnd="@dimen/_126sdp"
+                android:src="@drawable/ellipse_movie_ticket"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ellipse2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_43sdp"
+                android:layout_marginStart="@dimen/_125sdp"
+                android:src="@drawable/ellipse_movie_ticket"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_47sdp"
+                android:src="@drawable/stub_divider"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ellipse1"
+                app:layout_constraintEnd_toStartOf="@id/ellipse2"
+
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

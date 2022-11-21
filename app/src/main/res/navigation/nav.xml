@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/viewMovieFragment1">
+
+    <fragment
+        android:id="@+id/viewMovieFragment1"
+        android:name="com.example.figmapracticeapp.ui.fragment.ViewMovieFragment1"
+        android:label="fragment_view_movie1"
+        tools:layout="@layout/fragment_view_movie1"
+        >
+        <action
+            android:id="@+id/action_viewMovieFragment1_to_movieTicketSeats"
+            app:destination="@id/movieTicketSeats" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieTicketSeats"
+        android:name="com.example.figmapracticeapp.ui.fragment.MovieTicketSeats"
+        android:label="fragment_movie_ticket_seats"
+        tools:layout="@layout/fragment_movie_ticket_seats" >
+        <action
+            android:id="@+id/action_movieTicketSeats_to_movie_Review_Detail_Fragment"
+            app:destination="@id/movie_Review_Detail_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movie_Review_Detail_Fragment"
+        android:name="com.example.figmapracticeapp.Movie_Review_Detail_Fragment"
+        android:label="fragment_movie__review__detail_"
+        tools:layout="@layout/fragment_movie__review__detail_" />
+</navigation>

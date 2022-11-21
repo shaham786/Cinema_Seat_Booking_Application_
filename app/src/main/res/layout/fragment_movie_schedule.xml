@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey"
+    tools:context=".ui.fragment.MovieScheduleFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_20sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_schedule_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_17sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:fontFamily="@font/work_sans_vf"
+                android:text="Date"
+                android:textColor="#000000"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/Rv_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_17sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/tv_schedule_date"
+                tools:listitem="@layout/date" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_schedule_cinema"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:fontFamily="@font/work_sans_vf"
+                android:text="Cinema"
+                android:textColor="#000000"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toStartOf="@id/Rv_date"
+                app:layout_constraintTop_toBottomOf="@id/Rv_date" />
+
+            <TextView
+                android:id="@+id/tv_select_cinema"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_17sdp"
+                android:background="@color/white"
+                android:drawableRight="@drawable/dropdown"
+                android:fontFamily="@font/work_sans_vf"
+                android:gravity="center"
+                android:paddingStart="@dimen/_13sdp"
+                android:paddingEnd="@dimen/_13sdp"
+                android:text="Select Cinema"
+                android:textAlignment="textStart"
+                android:textColor="#161616"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_schedule_cinema"
+                app:layout_constraintTop_toBottomOf="@id/tv_schedule_cinema"
+                tools:ignore="RtlCompat" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_schedule_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:fontFamily="@font/work_sans_vf"
+                android:text="Select Time"
+                android:textColor="#000000"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toStartOf="@id/tv_select_cinema"
+                app:layout_constraintTop_toBottomOf="@id/tv_select_cinema" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_17sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/tv_schedule_time"
+                tools:listitem="@layout/select_time" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_schedule_hall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:fontFamily="@font/work_sans_vf"
+                android:text="Select Hall"
+                android:textColor="#000000"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toStartOf="@id/rv_time"
+                app:layout_constraintTop_toBottomOf="@id/rv_time" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_hall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_17sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/tv_schedule_hall"
+                tools:listitem="@layout/select_hall" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_schedule_seat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:fontFamily="@font/work_sans_vf"
+                android:text="Select Seat Type"
+                android:textColor="#000000"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toStartOf="@id/rv_hall"
+                app:layout_constraintTop_toBottomOf="@id/rv_hall" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_seat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_17sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/tv_schedule_seat"
+                tools:listitem="@layout/select_seat" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/select_seat_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/_24sdp"
+                android:paddingStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_17sdp"
+                android:layout_marginEnd="@dimen/_17sdp"
+                android:drawableRight="@drawable/arrow_right"
+                android:text="Select Seat(s)"
+                android:gravity="center"
+                android:textAlignment="textStart"
+                android:fontFamily="@font/work_sans_vf"
+                android:textColor="#FFC20C"
+                android:background="@drawable/button_roundable"
+                app:layout_constraintTop_toBottomOf="@id/rv_seat"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="RtlCompat" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

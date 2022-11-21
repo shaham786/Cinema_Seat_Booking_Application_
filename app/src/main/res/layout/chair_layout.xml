@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="@dimen/_23sdp"
+    android:layout_height="@dimen/_23sdp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_seat_avaialble"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:src="@drawable/seat_available"
+        />
+
+
+</LinearLayout>

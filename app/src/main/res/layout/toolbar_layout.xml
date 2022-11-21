@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_47sdp"
+    android:background="#262626"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_movie_screen"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_47sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#262626"
+        >
+
+        <ImageButton
+            android:id="@+id/iv_close_btn"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:src="@drawable/close"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:background="#00FFFFFF"
+            android:layout_gravity="end"/>
+        <ImageButton
+            android:id="@+id/iv_back_btn"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_gravity="start"
+            android:src="@drawable/arrow_left_white"
+            android:background="#00FFFFFF"
+            />
+        <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:dotsColor="#E0E0E0"
+            app:selectedDotColor="#FFC20C"
+            android:layout_gravity="center"
+            app:dotsCornerRadius="8dp"
+            app:dotsSize="@dimen/_5sdp"
+            app:dotsSpacing="4dp"
+            app:progressMode="true"
+            />
+
+    </androidx.appcompat.widget.Toolbar>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.MovieTicketSeats"
+    android:background="@color/darker_grey">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rectangle_layout_2">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_movie_ticket_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_seat_s"
+            android:textSize="@dimen/_17ssp"
+            android:textColor="#161616"
+            android:textStyle="bold"
+            android:fontFamily="@font/work_sans_vf"
+            android:layout_marginStart="@dimen/_17sdp"
+            android:layout_marginTop="@dimen/_13sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_movie_ticket_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/book_yourself_the_seat_you_desire"
+            android:fontFamily="@font/work_sans_vf"
+            android:textSize="@dimen/_11ssp"
+            android:layout_marginStart="@dimen/_17sdp"
+            app:layout_constraintTop_toBottomOf="@id/tv_movie_ticket_1"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:dividerColor="@color/divider_grey"
+            android:layout_marginTop="@dimen/_13sdp"
+            app:layout_constraintTop_toBottomOf="@id/tv_movie_ticket_2"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_movie_ticket_1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_25sdp"
+            android:src="@drawable/curved_line"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_17sdp"
+            android:layout_marginEnd="@dimen/_17sdp"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_movie_ticket_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_10ssp"
+            android:text="@string/screen"
+            android:textColor="#6f6f6f"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_movie_ticket_1"
+            app:layout_constraintBottom_toBottomOf="@id/iv_movie_ticket_1"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_movie_ticket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/chair_layout"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            android:paddingTop="@dimen/_27sdp"
+            android:paddingStart="@dimen/_17sdp"
+            android:paddingEnd="@dimen/_17sdp"
+            android:paddingBottom="@dimen/_23sdp"
+            app:layout_constraintTop_toBottomOf="@id/iv_movie_ticket_1"/>
+        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/light_grey"
+
+            app:layout_constraintTop_toBottomOf="@id/rv_movie_ticket">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv1_cl2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_10ssp"
+                android:text="@string/unavailable"
+                android:textColor="@color/dark_grey"
+                android:gravity="center"
+                android:clickable="true"
+                android:drawableStart="@drawable/set_unavailable_s"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tv2_cl2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv2_cl2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/_10ssp"
+                android:text="@string/available"
+                android:textColor="@color/dark_grey"
+                android:drawableStart="@drawable/seat_avilable_s"
+                app:layout_constraintStart_toEndOf="@id/tv1_cl2"
+                app:layout_constraintEnd_toStartOf="@id/tv3_cl2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv3_cl2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/_10ssp"
+                android:text="@string/your_seats"
+                android:textColor="@color/dark_grey"
+                android:drawableStart="@drawable/seat_selected_s"
+                app:layout_constraintStart_toEndOf="@id/tv2_cl2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    tools:context=".Movie_Review_Detail_Fragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rectangle_layout_2"
+        android:elevation="@dimen/_1sdp"
+        >
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_review_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/review_details"
+            android:textSize="@dimen/_17ssp"
+            android:textColor="#161616"
+            android:textStyle="bold"
+            android:fontFamily="@font/work_sans_vf"
+            android:layout_marginStart="@dimen/_17sdp"
+            android:layout_marginTop="@dimen/_13sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/review_details_divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:dividerColor="@color/divider_grey"
+            android:layout_marginTop="@dimen/_13sdp"
+            app:layout_constraintTop_toBottomOf="@id/tv_review_details"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl1_review"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/review_details_divider"
+
+            >
+            <TextView
+                android:id="@+id/tv_ticket_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tickets_amount"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/work_sans_vf"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:layout_marginStart="@dimen/_19sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rs_1_500_00"
+                android:textColor="#161616"
+                android:textSize="@dimen/_20ssp"
+                android:textStyle="bold"
+                android:fontFamily="@font/work_sans_vf"
+                android:layout_marginBottom="@dimen/_13sdp"
+                app:layout_constraintTop_toBottomOf="@id/tv_ticket_amount"
+                app:layout_constraintStart_toStartOf="@id/tv_ticket_amount"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/review_details_divider2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:dividerColor="@color/light_grey"
+            app:layout_constraintTop_toBottomOf="@id/cl1_review"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl2_review"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/cl1_review"
+            tools:layout_editor_absoluteX="0dp">
+
+            <TextView
+                android:id="@+id/tv_movie_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_19sdp"
+                android:layout_marginTop="@dimen/_17sdp"
+                android:text="@string/movie"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/rounded_iv_cv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_13sdp"
+                android:backgroundTint="@color/black"
+                app:cardCornerRadius="@dimen/_50sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_movie_review"
+                app:layout_constraintTop_toBottomOf="@id/tv_movie_review">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_review_movie_image"
+                    android:layout_width="@dimen/_27sdp"
+                    android:layout_height="@dimen/_27sdp"
+                    android:background="@drawable/civilwar" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_review_movie_name_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:text="Civil War"
+                android:textColor="#262626"
+                android:textSize="@dimen/_11ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/rounded_iv_cv_1"
+                app:layout_constraintTop_toTopOf="@id/rounded_iv_cv_1"
+
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="29/09/2020 at 12:00 pm"
+                android:textColor="#262626"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/work_sans_vf"
+                app:layout_constraintBottom_toBottomOf="@id/rounded_iv_cv_1"
+                app:layout_constraintStart_toEndOf="@id/rounded_iv_cv_1"
+                app:layout_constraintStart_toStartOf="@id/tv_review_movie_name_1"
+                app:layout_constraintTop_toBottomOf="@id/tv_review_movie_name_1"
+
+                app:layout_constraintVertical_bias="0.8" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/review_details_divider3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:dividerColor="@color/light_grey"
+            app:layout_constraintTop_toBottomOf="@id/cl2_review"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl3_review"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/cl2_review"
+            tools:layout_editor_absoluteX="0dp">
+
+            <TextView
+                android:id="@+id/tv_for_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_19sdp"
+                android:layout_marginTop="@dimen/_17sdp"
+                android:text="For"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/rounded_iv_cv_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_13sdp"
+                android:backgroundTint="@color/black"
+                app:cardCornerRadius="@dimen/_50sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_for_review"
+                app:layout_constraintTop_toBottomOf="@id/tv_for_review">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_review_movie_image2"
+                    android:layout_width="@dimen/_27sdp"
+                    android:layout_height="@dimen/_27sdp"
+                    android:background="@drawable/civilwar" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_review_movie_name_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:text="Cinepax Vogue Tower"
+                android:textColor="#262626"
+                android:textSize="@dimen/_11ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/rounded_iv_cv_2"
+                app:layout_constraintTop_toTopOf="@id/rounded_iv_cv_2"
+
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_for_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Silver (E-7,E-8)"
+                android:textColor="#262626"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/work_sans_vf"
+                app:layout_constraintBottom_toBottomOf="@id/rounded_iv_cv_2"
+                app:layout_constraintStart_toEndOf="@id/rounded_iv_cv_2"
+                app:layout_constraintStart_toStartOf="@id/tv_review_movie_name_2"
+                app:layout_constraintTop_toBottomOf="@id/tv_review_movie_name_2"
+
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/review_details_divider4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:dividerColor="@color/light_grey"
+            app:layout_constraintTop_toBottomOf="@id/cl3_review"/>
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

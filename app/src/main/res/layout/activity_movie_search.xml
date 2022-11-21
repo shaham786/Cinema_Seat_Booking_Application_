@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.MovieSearchActivity"
+    android:background="#262626"
+    >
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_movie_search"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_46sdp"
+        app:layout_constraintTop_toTopOf="parent">
+    <androidx.constraintlayout.utils.widget.ImageFilterButton
+        android:id="@+id/iv_close_btn"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:src="@drawable/close"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:background="#00FFFFFF"
+        android:layout_gravity="end"
+
+        />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:background="@drawable/rectangle_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_movie_search"
+
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="39dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_search_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/tv_filter_drawable"
+            android:drawableEnd="@drawable/tv_close"
+            android:drawablePadding="@dimen/_6sdp"
+            android:fontFamily="@font/work_sans_vf"
+            android:padding="@dimen/_2sdp"
+            android:paddingStart="@dimen/_7sdp"
+            android:paddingEnd="@dimen/_7sdp"
+            android:text="@string/lahore"
+            android:textColor="#6F6F6F"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintEnd_toStartOf="@id/tv_search_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_searchview" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_search_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/tv_filter_drawable"
+            android:drawableEnd="@drawable/tv_close"
+            android:drawablePadding="@dimen/_6sdp"
+            android:fontFamily="@font/work_sans_vf"
+            android:padding="@dimen/_2sdp"
+            android:paddingStart="@dimen/_7sdp"
+            android:paddingEnd="@dimen/_7sdp"
+            android:text="@string/all_cinema"
+            android:textColor="#6F6F6F"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintEnd_toStartOf="@id/tv_search_3"
+            app:layout_constraintStart_toEndOf="@id/tv_search_1"
+            app:layout_constraintTop_toBottomOf="@id/et_searchview" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_search_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+
+            android:background="@drawable/tv_filter_drawable"
+            android:drawableEnd="@drawable/tv_close"
+            android:drawablePadding="@dimen/_6sdp"
+            android:fontFamily="@font/work_sans_vf"
+            android:padding="@dimen/_2sdp"
+            android:paddingStart="@dimen/_7sdp"
+            android:paddingEnd="@dimen/_7sdp"
+            android:text="@string/all_movies"
+            android:textColor="#6F6F6F"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_search_2"
+            app:layout_constraintTop_toBottomOf="@id/et_searchview" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyleView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/_16sdp"
+            android:paddingStart="@dimen/_22sdp"
+            android:paddingEnd="0dp"
+            app:flow_horizontalAlign="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_search_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:listitem="@layout/movie_card_layout"
+            android:elevation="@dimen/_8sdp"/>
+
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/iv_filter"
+            android:layout_width="@dimen/_27sdp"
+            android:layout_height="@dimen/_27sdp"
+            android:src="@drawable/iv_filter"
+            android:layout_marginStart="@dimen/_7sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@id/et_searchview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/et_searchview"
+            app:layout_constraintTop_toTopOf="@id/et_searchview" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_searchview"
+            android:layout_width="@dimen/_232sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:background="@drawable/search_view_layout"
+            android:drawableEnd="@drawable/iv_search"
+            android:drawablePadding="@dimen/_12sdp"
+            android:fontFamily="@font/work_sans_vf"
+            android:hint="@string/search_movie_by_name"
+            android:textColorHint="#A8A8A8"
+            android:textColor="@color/black"
+            android:padding="@dimen/_12sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iv_filter"
+            app:layout_constraintTop_toBottomOf="@id/cl3" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70sdp"
+            android:background="@drawable/rectangle_layout_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_movie_search_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_17sdp"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:fontFamily="@font/work_sans_vf"
+                android:text="@string/movie_tickets"
+                android:textColor="#161616"
+                android:textSize="@dimen/_17ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_movie_search_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_17sdp"
+                android:fontFamily="@font/work_sans_vf"
+                android:text="@string/select_and_book_the_movie_of_your_choice"
+                android:textColor="#393939"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_movie_search_1" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
