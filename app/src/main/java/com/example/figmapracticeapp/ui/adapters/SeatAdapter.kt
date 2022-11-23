@@ -8,8 +8,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.figmapracticeapp.R
 import com.example.figmapracticeapp.ui.model.SeatingArangementModel
 
-class SeatAdapter(private val dataset: ArrayList<SeatingArangementModel>
+open class SeatAdapter(private val dataset: ArrayList<SeatingArangementModel>,
 ): RecyclerView.Adapter<SeatAdapter.Holder2>() {
+
+    var onItemClick : ((SeatingArangementModel) -> Unit)? = null
 
 
     inner class Holder2(view : View) : RecyclerView.ViewHolder(view) {
@@ -41,18 +43,20 @@ class SeatAdapter(private val dataset: ArrayList<SeatingArangementModel>
             } else {
                 holder.itemimage.setImageResource(R.drawable.seat_available)
             }
+
             holder.itemView.setOnClickListener {
                 val item = dataset[holder.adapterPosition]
                 item.isSelected = !item.isSelected
                 dataset[holder.adapterPosition] = item
                 notifyItemChanged(holder.adapterPosition)
+
+                onItemClick?.invoke(dataset[holder.adapterPosition])
             }
 
+//
         } else {
             holder.itemimage.setImageResource(R.color.white)
         }
-
-
 
     }
 

@@ -44,6 +44,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+    implementation 'androidx.constraintlayout:constraintlayout-compose:1.0.1'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
@@ -51,7 +52,8 @@ dependencies {
     implementation 'com.intuit.ssp:ssp-android:1.1.0'
     implementation 'com.tbuonomo:dotsindicator:4.3'
     implementation 'com.makeramen:roundedimageview:2.3.0'
-
+    implementation 'com.github.shopgun:zoomlayout:3.0.0'
+    implementation "com.otaliastudios:zoomlayout:1.9.0"
 
 
 }

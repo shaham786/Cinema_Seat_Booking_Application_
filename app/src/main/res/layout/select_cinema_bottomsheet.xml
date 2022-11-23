@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bottomsheet_rounded"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_9sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/tray_bottomsheet"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_select_cinema_bottomsheet_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Cinema"
+        android:textStyle="bold"
+        android:textSize="@dimen/_17sdp"
+        android:textColor="@color/darker_grey"
+        android:fontFamily="@font/work_sans_vf"
+        android:layout_marginStart="@dimen/_17sdp"
+        android:layout_marginTop="@dimen/_35sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/select_cinema_divider1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_grey"
+        android:layout_marginTop="@dimen/_13sdp"
+        app:layout_constraintTop_toBottomOf="@id/tv_select_cinema_bottomsheet_1"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_select_cinema_searchview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:background="@drawable/search_view_layout"
+        android:backgroundTint="@color/light_grey"
+        android:drawableEnd="@drawable/iv_search"
+        android:drawablePadding="@dimen/_12sdp"
+        android:fontFamily="@font/work_sans_vf"
+        android:hint="Search cinema"
+        android:textColorHint="#A8A8A8"
+        android:textColor="@color/black"
+        android:padding="@dimen/_12sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/select_cinema_divider1"
+        app:layout_constraintBottom_toTopOf="@id/rv_select_cinema_1"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_select_cinema_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_27sdp"
+        tools:listitem="@layout/search_cinema_layout"
+        tools:itemCount="20"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/et_select_cinema_searchview"
+
+        />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

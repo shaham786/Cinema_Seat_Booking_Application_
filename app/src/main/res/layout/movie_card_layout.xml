@@ -23,7 +23,7 @@
                 android:id="@+id/iv_cardview_layout"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_179sdp"
-                android:background="@color/black"
+                android:background="@drawable/civilwar"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:layout_editor_absoluteX="0dp" />
 

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/cl_bottomsheet_movie_seat"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottomsheet_rounded"
+    android:elevation="10dp"
+    app:behavior_hideable="true"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    >
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_9sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/tray_bottomsheet"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_movie_bottomsheet_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total"
+            android:textFontWeight="600"
+            android:textSize="@dimen/_17sdp"
+            android:textColor="@color/darker_grey"
+            android:fontFamily="@font/work_sans_vf"
+            android:layout_marginStart="@dimen/_17sdp"
+            android:layout_marginTop="@dimen/_35sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_movie_bottomsheet_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E-7, E-8"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="#A8A8A8"
+            android:fontFamily="@font/work_sans_vf"
+            android:textFontWeight="600"
+            app:layout_constraintTop_toBottomOf="@id/tv_movie_bottomsheet_1"
+            app:layout_constraintStart_toStartOf="@id/tv_movie_bottomsheet_1"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_movie_bottomsheet_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rs. 1,500"
+            android:textFontWeight="600"
+            android:textSize="@dimen/_17sdp"
+            android:textColor="@color/darker_grey"
+            android:fontFamily="@font/work_sans_vf"
+            android:layout_marginEnd="@dimen/_17sdp"
+            android:layout_marginTop="@dimen/_35sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/select_seat_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingEnd="@dimen/_24sdp"
+            android:paddingStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_17sdp"
+            android:layout_marginEnd="@dimen/_17sdp"
+            android:layout_marginBottom="@dimen/_21sdp"
+            android:drawableRight="@drawable/arrow_right"
+            android:text="@string/book_now"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_13sdp"
+            android:gravity="center"
+            android:textAlignment="textStart"
+            android:fontFamily="@font/work_sans_vf"
+            android:textFontWeight="600"
+            android:textColor="#FFC20C"
+            android:background="@drawable/button_roundable"
+            app:layout_constraintTop_toBottomOf="@id/tv_movie_bottomsheet_2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="RtlCompat" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
