@@ -10,6 +10,9 @@
     <color name="light_grey">#F3F3F3</color>
     <color name="divider_grey">#E0E0E0</color>
     <color name="transparent">#00FFFFFF</color>
-    <color name="dark_grey">#6F6F6F</color>
-    <color name="darker_grey">#262626</color>
+    <color name="text_gray">#6F6F6F</color>
+    <color name="dark_grey">#262626</color>
+    <color name="orange">#FFBD00</color>
+    <color name="light_gray">#D8D8D8</color>
+    <color name="yellow">#FFC20C</color>
 </resources>

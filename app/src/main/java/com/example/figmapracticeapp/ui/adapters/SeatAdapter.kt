@@ -29,11 +29,11 @@ open class SeatAdapter(private val dataset: ArrayList<SeatingArangementModel>,
         return Holder2(view)
     }
 
-    fun updateList(list: ArrayList<SeatingArangementModel>){
-        this.dataset.clear()
-        this.dataset.addAll(list)
-        notifyDataSetChanged()
-    }
+//    fun updateList(list: ArrayList<SeatingArangementModel>){
+//        this.dataset.clear()
+//        this.dataset.addAll(list)
+//        notifyDataSetChanged()
+//    }
 
     override fun onBindViewHolder(holder: Holder2, position: Int) {
 

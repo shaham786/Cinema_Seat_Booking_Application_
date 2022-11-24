@@ -11,6 +11,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.figmapracticeapp.R
 import com.example.figmapracticeapp.ui.model.Fooddata
 import com.example.figmapracticeapp.databinding.FragmentViewMovie1Binding
+import com.example.figmapracticeapp.ui.activities.MovieScreenActivity
 import com.example.figmapracticeapp.ui.adapters.ViewPager2Adapter
 import com.google.android.material.tabs.TabLayout
 
@@ -28,6 +29,11 @@ class ViewMovieFragment1 : Fragment() {
         savedInstanceState: Bundle? ): View? {
 
         binding = FragmentViewMovie1Binding.inflate(layoutInflater,container,false)
+
+        (activity as MovieScreenActivity).getDotIndicator().apply {
+            initDots(4)
+            setDotSelection(0)
+        }
 
         return binding.root
 

@@ -12,13 +12,12 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/_46sdp"
         app:layout_constraintTop_toTopOf="parent">
-    <androidx.constraintlayout.utils.widget.ImageFilterButton
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/iv_close_btn"
         android:layout_width="@dimen/_15sdp"
         android:layout_height="@dimen/_15sdp"
-        android:src="@drawable/close"
         android:layout_marginEnd="@dimen/_12sdp"
-        android:background="#00FFFFFF"
+        android:background="@drawable/close"
         android:layout_gravity="end"
 
         />

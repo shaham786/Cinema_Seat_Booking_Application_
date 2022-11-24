@@ -1,13 +1,15 @@
 package com.example.figmapracticeapp.ui.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.figmapracticeapp.R
 import com.example.figmapracticeapp.databinding.FragmentMovieTicketSeatsBinding
+import com.example.figmapracticeapp.ui.activities.MovieScreenActivity
 import com.example.figmapracticeapp.ui.adapters.SeatAdapter
 import com.example.figmapracticeapp.ui.model.SeatingArangementModel
 import com.google.android.material.bottomsheet.BottomSheetBehavior
@@ -15,8 +17,8 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 class MovieTicketSeats : Fragment() {
 
     private lateinit var binding : FragmentMovieTicketSeatsBinding
-    private val arrayList = ArrayList<SeatingArangementModel>()
-    val adapter = SeatAdapter(arrayList)
+    private lateinit var arrayList: ArrayList<SeatingArangementModel>
+    private var flag:Boolean=false
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -24,6 +26,18 @@ class MovieTicketSeats : Fragment() {
 
         binding = FragmentMovieTicketSeatsBinding.inflate(layoutInflater,container,false)
 
+
+
+        (activity as MovieScreenActivity).getDotIndicator().apply {
+            initDots(4)
+            setDotSelection(1)
+        }
+
+
+
+
+        if(!flag){
+            arrayList = ArrayList()
         arrayList.add(SeatingArangementModel(0, false))
         arrayList.add(SeatingArangementModel(1, true))
         arrayList.add(SeatingArangementModel(2, true))
@@ -112,20 +126,22 @@ class MovieTicketSeats : Fragment() {
         arrayList.add(SeatingArangementModel(85, true))
         arrayList.add(SeatingArangementModel(86, true))
         arrayList.add(SeatingArangementModel(87, true))
+        flag=true
+        }
 
-        val availalelist :ArrayList<SeatingArangementModel> = arrayList.filter { it.isAvailable } as ArrayList<SeatingArangementModel>
-
+//        val availalelist :ArrayList<SeatingArangementModel> = arrayList.filter { it.isAvailable }
+//        as ArrayList<SeatingArangementModel>
 
         binding.rvMovieTicket.layoutManager = GridLayoutManager(this.context, 11)
-        binding.rvMovieTicket.adapter = adapter
+        binding.rvMovieTicket.setHasFixedSize(true)
 
-//        val dialog = BottomSheetDialog(requireContext(),R.style.AppBottomSheetDialogTheme)
-//        val view = layoutInflater.inflate(R.layout.movie_seat_bottomsheet, null)
+        val adapter = SeatAdapter(arrayList)
+        binding.rvMovieTicket.adapter = adapter
 
 
         val bottomSheetBehavior : BottomSheetBehavior<*>?
 
-        val bottomsheet : View = binding.root.findViewById(R.id.include_bottomsheet)
+        val bottomsheet : View = binding.includeBottomsheet.root
         bottomSheetBehavior = BottomSheetBehavior.from(bottomsheet)
 
         bottomSheetBehavior.state = BottomSheetBehavior.STATE_HIDDEN
@@ -135,10 +151,14 @@ class MovieTicketSeats : Fragment() {
             bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
         }
 
-        binding.tv2Cl2.setOnClickListener {
-            adapter.updateList(availalelist)
+//        binding.tv2Cl2.setOnClickListener {
+//            adapter.updateList(availalelist)
+//        }
+
+        binding.includeBottomsheet.bookNowBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_movieTicketSeats_to_movieReviewFragment)
         }
-       return binding.root
+        return binding.root
     }
 
 }

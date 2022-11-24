@@ -4,14 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/black"
-    tools:context=".Movie_Review_Detail_Fragment">
+    tools:context="ui.fragment.MovieReviewFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/rectangle_layout_2"
-        android:elevation="@dimen/_1sdp"
         >
 
 
@@ -49,7 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tickets_amount"
-                android:textColor="@color/dark_grey"
+                android:textColor="@color/text_gray"
                 android:textSize="@dimen/_11ssp"
                 android:fontFamily="@font/work_sans_vf"
                 android:layout_marginTop="@dimen/_13sdp"
@@ -230,6 +228,4 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 </FrameLayout>

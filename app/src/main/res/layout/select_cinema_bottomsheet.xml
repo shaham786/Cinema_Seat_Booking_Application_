@@ -22,7 +22,7 @@
         android:text="Select Cinema"
         android:textStyle="bold"
         android:textSize="@dimen/_17sdp"
-        android:textColor="@color/darker_grey"
+        android:textColor="@color/dark_grey"
         android:fontFamily="@font/work_sans_vf"
         android:layout_marginStart="@dimen/_17sdp"
         android:layout_marginTop="@dimen/_35sdp"
@@ -33,7 +33,7 @@
         android:id="@+id/select_cinema_divider1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/dark_grey"
+        android:background="@color/text_gray"
         android:layout_marginTop="@dimen/_13sdp"
         app:layout_constraintTop_toBottomOf="@id/tv_select_cinema_bottomsheet_1"/>
 

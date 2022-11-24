@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:text="Hall 1 - 2D"
             android:textSize="@dimen/_12ssp"
-            android:textColor="@color/dark_grey"
+            android:textColor="@color/text_gray"
             android:fontFamily="@font/work_sans_vf"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"

@@ -29,17 +29,19 @@
             android:src="@drawable/arrow_left_white"
             android:background="#00FFFFFF"
             />
-        <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+        <com.example.figmapracticeapp.ui.model.DotsIndicator
+            android:id="@+id/dotsIndicator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:dotsColor="#E0E0E0"
-            app:selectedDotColor="#FFC20C"
-            android:layout_gravity="center"
+            app:dotsColor="@color/light_gray"
             app:dotsCornerRadius="8dp"
-            app:dotsSize="@dimen/_5sdp"
+            app:dotsSize="8dp"
             app:dotsSpacing="4dp"
-            app:progressMode="true"
-            />
+            app:dotsWidthFactor="2.5"
+            android:layout_gravity="center"
+            android:gravity="center"
+            app:progressMode="false"
+            app:selectedDotColor="@color/yellow"/>
 
     </androidx.appcompat.widget.Toolbar>
 

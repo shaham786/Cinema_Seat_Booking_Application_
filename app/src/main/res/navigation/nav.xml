@@ -20,13 +20,15 @@
         android:name="com.example.figmapracticeapp.ui.fragment.MovieTicketSeats"
         android:label="fragment_movie_ticket_seats"
         tools:layout="@layout/fragment_movie_ticket_seats" >
+
         <action
-            android:id="@+id/action_movieTicketSeats_to_movie_Review_Detail_Fragment"
-            app:destination="@id/movie_Review_Detail_Fragment" />
+            android:id="@+id/action_movieTicketSeats_to_movieReviewFragment"
+            app:destination="@id/movieReviewFragment" />
     </fragment>
     <fragment
-        android:id="@+id/movie_Review_Detail_Fragment"
-        android:name="com.example.figmapracticeapp.Movie_Review_Detail_Fragment"
-        android:label="fragment_movie__review__detail_"
-        tools:layout="@layout/fragment_movie__review__detail_" />
+        android:id="@+id/movieReviewFragment"
+        android:name="com.example.figmapracticeapp.ui.fragment.MovieReviewFragment"
+        android:label="fragment_movie_review"
+        tools:layout="@layout/fragment_movie_review" />
+
 </navigation>
