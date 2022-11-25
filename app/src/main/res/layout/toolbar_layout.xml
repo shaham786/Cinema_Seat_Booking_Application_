@@ -15,16 +15,18 @@
 
         <ImageButton
             android:id="@+id/iv_close_btn"
-            android:layout_width="@dimen/_15sdp"
-            android:layout_height="@dimen/_15sdp"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:paddingStart="@dimen/_13sdp"
             android:src="@drawable/close"
             android:layout_marginEnd="@dimen/_12sdp"
             android:background="#00FFFFFF"
             android:layout_gravity="end"/>
         <ImageButton
             android:id="@+id/iv_back_btn"
-            android:layout_width="@dimen/_15sdp"
-            android:layout_height="@dimen/_15sdp"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:paddingEnd="@dimen/_13sdp"
             android:layout_gravity="start"
             android:src="@drawable/arrow_left_white"
             android:background="#00FFFFFF"

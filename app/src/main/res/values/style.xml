@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style
-        name="abcd" parent="Widget.AppCompat.TextView">
 
-    </style>
     <declare-styleable name="DotsIndicator">
         <attr name="dots_count" format="integer" />
         <attr name="selected_dot_scale_factor" format="float" />

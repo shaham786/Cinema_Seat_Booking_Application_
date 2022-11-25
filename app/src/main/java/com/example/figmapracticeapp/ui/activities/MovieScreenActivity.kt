@@ -22,7 +22,7 @@ class MovieScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMovieScreenBinding.inflate(layoutInflater)
-
+        setContentView(binding.root)
 
 
 //       getDotIndicator().initDots(3)
@@ -53,7 +53,7 @@ class MovieScreenActivity : AppCompatActivity() {
             finish()
 
         }
-        setContentView(binding.root)
+
 
 //        val navHost = supportFragmentManager.findFragmentById(R.id.frg_container1) as NavHostFragment?
 //        val navController = navHost?.navController
