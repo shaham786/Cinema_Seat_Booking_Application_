@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "852592809515",
+    "project_id": "figma-39ed9",
+    "storage_bucket": "figma-39ed9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:852592809515:android:bb09816566331f5112fc6e",
+        "android_client_info": {
+          "package_name": "com.example.figmapracticeapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "852592809515-91odsbpmo1ctd4le6v13hlg642rjb76h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.figmapracticeapp",
+            "certificate_hash": "fe691fbb8efba4ee8c94ca049514be96fcfbeee7"
+          }
+        },
+        {
+          "client_id": "852592809515-vq095nsr4na26c2702h6guv6f05kn54u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTTuu8zoIxZ86FTVzpxdyBZl_IxAExeNw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "852592809515-vq095nsr4na26c2702h6guv6f05kn54u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

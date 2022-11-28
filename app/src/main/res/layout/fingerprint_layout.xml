@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/transparent"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl1_fingerprint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_17sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/roundabledialog"
+        android:elevation="10dp"
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_fingerprint_1"
+            android:layout_width="@dimen/_224sdp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/_19sdp"
+            android:layout_marginEnd="@dimen/_19sdp"
+            android:text="Confirm Transaction"
+            android:textColor="@color/dark_grey"
+            android:fontFamily="@font/work_sans_vf"
+            android:textFontWeight="600"
+            android:textSize="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_fingerprint_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Javairiya"
+            android:textSize="@dimen/_11ssp"
+            android:textColor="#2E2F30"
+            android:fontFamily="@font/work_sans_vf"
+            android:textFontWeight="400"
+            android:layout_marginTop="@dimen/_3sdp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_fingerprint_1"
+            app:layout_constraintStart_toStartOf="@id/tv_fingerprint_1"
+            app:layout_constraintEnd_toEndOf="@id/tv_fingerprint_1"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_fingerprint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_19sdp"
+            android:src="@drawable/fingerprint"
+            app:layout_constraintStart_toStartOf="@id/tv_fingerprint_2"
+            app:layout_constraintEnd_toEndOf="@id/tv_fingerprint_2"
+            app:layout_constraintTop_toBottomOf="@id/tv_fingerprint_2"
+
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_fingerprint_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:text="Touch the fingerprint sensor"
+            android:textSize="@dimen/_10ssp"
+            android:textColor="@color/dark_grey"
+            android:fontFamily="@font/work_sans_vf"
+            android:textFontWeight="400"
+            app:layout_constraintTop_toBottomOf="@id/iv_fingerprint"
+            app:layout_constraintStart_toStartOf="@id/iv_fingerprint"
+            app:layout_constraintEnd_toEndOf="@id/iv_fingerprint"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_marginBottom="@dimen/_25sdp"
+            android:text="Use MPIN"
+            android:textSize="@dimen/_10ssp"
+            android:textColor="@color/dark_grey"
+            android:fontFamily="@font/work_sans_vf"
+            android:textFontWeight="600"
+            app:layout_constraintTop_toBottomOf="@id/tv_fingerprint_3"
+            app:layout_constraintStart_toStartOf="@id/tv_fingerprint_3"
+            app:layout_constraintEnd_toEndOf="@id/tv_fingerprint_3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
