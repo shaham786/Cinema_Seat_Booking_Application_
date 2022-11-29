@@ -20,16 +20,19 @@ class MovieSearchActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+
+
+
         binding = ActivityMovieSearchBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         arrayList.add(
-            Fooddata("Avengers", R.drawable.avengers)
+            Fooddata("Tenet", R.drawable.tenet,"L3pk_TBkihU")
         )
         arrayList.add(
-            Fooddata("Avengers EndGame", R.drawable.endgame)
+            Fooddata("Avengers EndGame", R.drawable.endgame,"TcMBFSGVi1c")
         )
-        arrayList.add(
+        /*arrayList.add(
             Fooddata("Captain America CivilWar", R.drawable.civilwar)
         )
         arrayList.add(
@@ -53,6 +56,22 @@ class MovieSearchActivity : AppCompatActivity() {
         arrayList.add(
             Fooddata("Captain America CivilWar", R.drawable.civilwar)
         )
+*/
+
+
+        /*val etsearch = binding.etSearchview
+        etsearch.addTextChangedListener(object : TextWatcher{
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            }
+
+            override fun afterTextChanged(p0: Editable?) {
+            }
+
+        })
+*/
 
 
 
@@ -71,4 +90,14 @@ class MovieSearchActivity : AppCompatActivity() {
         }
 
     }
+/*    private fun filter(text: String) {
+        val filteredList: ArrayList<Fooddata> = ArrayList()
+        for (item in dataset) {
+            if (item.getText1().toLowerCase().contains(text.lowercase(Locale.getDefault()))) {
+                filteredList.add(item)
+            }
+        }
+        recyclerAdapter.filterList(filteredList)
+    }*/
+
 }

@@ -135,6 +135,8 @@
             android:background="@drawable/search_view_layout"
             android:drawableEnd="@drawable/iv_search"
             android:drawablePadding="@dimen/_12sdp"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
             android:fontFamily="@font/work_sans_vf"
             android:hint="@string/search_movie_by_name"
             android:padding="@dimen/_12sdp"

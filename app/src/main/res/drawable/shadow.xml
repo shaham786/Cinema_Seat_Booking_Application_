@@ -6,4 +6,6 @@
         android:angle="270"
         android:dither="true"
         />
+    <corners
+       android:radius="32dp"/>
 </shape>

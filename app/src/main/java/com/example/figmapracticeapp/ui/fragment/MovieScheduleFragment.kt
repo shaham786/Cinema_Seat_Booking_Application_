@@ -1,26 +1,20 @@
 package com.example.figmapracticeapp.ui.fragment
 
 import android.os.Bundle
-import android.os.ProxyFileDescriptorCallback
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
-import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.figmapracticeapp.R
 import com.example.figmapracticeapp.databinding.FragmentMovieScheduleBinding
 import com.example.figmapracticeapp.ui.adapters.*
-import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
 
 class MovieScheduleFragment(
-    val callback: () -> Unit
 ) : Fragment() {
 
     private lateinit var binding: FragmentMovieScheduleBinding
@@ -29,7 +23,7 @@ class MovieScheduleFragment(
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
        binding = FragmentMovieScheduleBinding.inflate(layoutInflater,container,false)
 
 //        date recyclerview
@@ -51,18 +45,14 @@ class MovieScheduleFragment(
 
         binding.tvSelectCinema.setOnClickListener {
 
-
-            val dialog = BottomSheetDialog(requireContext(),R.style.AppBottomSheetDialogTheme)
             val view = layoutInflater.inflate(R.layout.select_cinema_bottomsheet, null)
-
-
 
             val rv_search_cinema = view.rootView.findViewById<RecyclerView>(R.id.rv_select_cinema_1)
             rv_search_cinema.layoutManager = LinearLayoutManager(this.context,LinearLayoutManager.VERTICAL,false)
             rv_search_cinema.adapter = SearchCinemaAdapter(this)
 
 
-
+            val dialog = BottomSheetDialog(requireContext(),R.style.AppBottomSheetDialogTheme)
 
             dialog.behavior.peekHeight = 1000
             dialog.setCancelable(true)

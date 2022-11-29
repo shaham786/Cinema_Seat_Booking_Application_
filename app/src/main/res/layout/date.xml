@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto">
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="@dimen/_51sdp"
     android:layout_height="@dimen/_51sdp"
-    app:cardElevation="@dimen/_1sdp"
-    android:layout_marginEnd="@dimen/_10sdp"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginEnd="@dimen/_15sdp"
+    app:cardElevation="0dp"
+    android:elevation="0dp"
+    app:cardCornerRadius="@dimen/_5sdp"
+    app:cardBackgroundColor="@color/transparent"
+    android:background="@color/transparent">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white">
+        android:background="@drawable/recyclerview_selector_drawable">
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_date_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="23"
+        android:textSize="@dimen/_15ssp"
         android:fontFamily="@font/work_sans_vf"
-        android:layout_marginTop="-15dp"
-        android:textColor="@color/text_gray"
+        android:layout_marginTop="-20dp"
+        android:textFontWeight="600"
+        android:textColor="@color/custom_text_selector"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,9 +33,11 @@
         android:id="@+id/tv_date_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="-8dp"
         android:text="Tue"
-        android:textColor="@color/text_gray"
-
+        android:textSize="@dimen/_15ssp"
+        android:textFontWeight="600"
+        android:textColor="@color/custom_text_selector"
         android:fontFamily="@font/work_sans_vf"
         app:layout_constraintTop_toBottomOf="@id/tv_date_1"
         app:layout_constraintStart_toStartOf="@id/tv_date_1"
@@ -48,5 +55,3 @@
 
 
 </com.google.android.material.card.MaterialCardView>
-
-</layout>

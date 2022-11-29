@@ -5,15 +5,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation
-import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
-import com.example.figmapracticeapp.R
-import com.example.figmapracticeapp.ui.model.Fooddata
 import com.example.figmapracticeapp.databinding.FragmentViewMovie1Binding
 import com.example.figmapracticeapp.ui.activities.MovieScreenActivity
 import com.example.figmapracticeapp.ui.adapters.ViewPager2Adapter
+import com.example.figmapracticeapp.ui.model.Fooddata
 import com.google.android.material.tabs.TabLayout
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
+
 
 class ViewMovieFragment1 : Fragment() {
 
@@ -50,9 +50,7 @@ class ViewMovieFragment1 : Fragment() {
 //        val navController = Navigation.findNavController(requireActivity(), R.id.nav)
 
         val fragments: ArrayList<Fragment> = arrayListOf(
-            MovieScheduleFragment{
-                findNavController().navigate(R.id.movieTicketSeats);
-            }, MovieAboutFragment()
+            MovieScheduleFragment(), MovieAboutFragment()
         )
         viewPager.adapter = ViewPager2Adapter(fragments, requireActivity())
         viewPager.offscreenPageLimit = 2
@@ -85,7 +83,32 @@ class ViewMovieFragment1 : Fragment() {
         if (food1 != null) {
 
             binding.tvMovieView2.text = food1.textView
+            binding.thumbnail.setBackgroundResource(food1.imageView)
+
+            binding.playBtn.setOnClickListener {
+                binding.playBtn.visibility = View.GONE
+                binding.clVideoView.visibility = View.GONE
+                binding.thumbnail.visibility = View.GONE
+
+                val video = binding.movieVideo
+                lifecycle.addObserver(video)
+
+                video.addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
+                    override fun onReady(youTubePlayer: YouTubePlayer) {
+                        val videoId = food1.trailer
+                        if (videoId != null) {
+                            youTubePlayer.loadVideo(videoId, 0f)
+                        }
+                    }
+                })
+
+
+            }
+
         }
 
+
+
     }
+
 }
