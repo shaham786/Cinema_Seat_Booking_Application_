@@ -303,9 +303,9 @@
                         android:layout_width="@dimen/_20sdp"
                         android:layout_height="@dimen/_14sdp"
                         android:background="@drawable/account_details"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_email_4"
                         app:layout_constraintStart_toStartOf="@id/tv_info_review"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"/>
+                        app:layout_constraintTop_toBottomOf="@id/tv_info_review"/>
 
 
                     <androidx.appcompat.widget.AppCompatTextView
@@ -344,6 +344,7 @@
                         android:textColor="#262626"
                         android:textSize="@dimen/_11ssp"
                         android:fontFamily="@font/work_sans_vf"
+                        android:layout_marginBottom="@dimen/_13sdp"
                         app:layout_constraintBottom_toBottomOf="@id/iv_review_movie_image3"
                         app:layout_constraintStart_toEndOf="@id/iv_review_movie_image3"
                         app:layout_constraintStart_toStartOf="@id/tv_number_4"
