@@ -11,9 +11,9 @@
         android:layout_height="match_parent"
         android:fillViewport="true"
         android:orientation="vertical"
-        android:paddingBottom="@dimen/_10sdp"
         android:paddingStart="@dimen/_17sdp"
         android:paddingEnd="@dimen/_17sdp"
+        android:paddingBottom="@dimen/_10sdp"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -24,64 +24,63 @@
                 android:id="@+id/tv_about_info"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Armed with only one word, Tenet, and fighting for the survival of the entire world, a Protagonist journeys through a twilight world of international espionage on a mission that will unfold in something beyond real time."
-                android:textSize="@dimen/_11ssp"
-                android:textColor="#525252"
-                android:fontFamily="@font/work_sans_vf"
                 android:layout_marginTop="@dimen/_20sdp"
-                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="@font/work_sans_vf"
+                android:text="Armed with only one word, Tenet, and fighting for the survival of the entire world, a Protagonist journeys through a twilight world of international espionage on a mission that will unfold in something beyond real time."
+                android:textColor="#525252"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_about_director"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Director"
-                android:textSize="@dimen/_11ssp"
-                android:textColor="#000000"
-                android:textStyle="bold"
-                android:fontFamily="@font/work_sans_vf"
                 android:layout_marginTop="@dimen/_20sdp"
-                app:layout_constraintTop_toBottomOf="@id/tv_about_info"
+                android:fontFamily="@font/work_sans_vf"
+                android:text="Director"
+                android:textColor="#000000"
+                android:textSize="@dimen/_11ssp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@id/tv_about_info"
-                />
+                app:layout_constraintTop_toBottomOf="@id/tv_about_info" />
+
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_about_director2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Christpher Nolan"
-                android:textSize="@dimen/_11ssp"
-                android:textColor="#525252"
                 android:fontFamily="@font/work_sans_vf"
-                app:layout_constraintTop_toBottomOf="@id/tv_about_director"
-                app:layout_constraintStart_toStartOf="@id/tv_about_director"/>
+                android:text="Christpher Nolan"
+                android:textColor="#525252"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintStart_toStartOf="@id/tv_about_director"
+                app:layout_constraintTop_toBottomOf="@id/tv_about_director" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_about_writer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Writer"
-                android:textSize="@dimen/_11ssp"
-                android:textColor="#000000"
-                android:textStyle="bold"
-                android:fontFamily="@font/work_sans_vf"
                 android:layout_marginTop="@dimen/_20sdp"
-                app:layout_constraintTop_toBottomOf="@id/tv_about_director2"
+                android:fontFamily="@font/work_sans_vf"
+                android:text="Writer"
+                android:textColor="#000000"
+                android:textSize="@dimen/_11ssp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@id/tv_about_director2"
-                />
+                app:layout_constraintTop_toBottomOf="@id/tv_about_director2" />
+
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_about_writer2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Christopher Nolan"
-                android:textSize="@dimen/_11ssp"
-                android:textColor="#525252"
                 android:fontFamily="@font/work_sans_vf"
-                app:layout_constraintTop_toBottomOf="@id/tv_about_writer"
-                app:layout_constraintStart_toStartOf="@id/tv_about_writer"/>
+                android:text="Christopher Nolan"
+                android:textColor="#525252"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintStart_toStartOf="@id/tv_about_writer"
+                app:layout_constraintTop_toBottomOf="@id/tv_about_writer" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
     </androidx.core.widget.NestedScrollView>

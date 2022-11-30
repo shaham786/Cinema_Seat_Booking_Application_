@@ -106,7 +106,8 @@
                     android:drawablePadding="@dimen/_3sdp"
                     app:layout_constraintTop_toBottomOf="@id/tv_movie_view_2"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"/>
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/tv_movie_view_4"
@@ -123,20 +124,31 @@
                     app:layout_constraintBottom_toBottomOf="@id/tv_movie_view_3"
 
                     />
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/imdb"
-                    android:drawablePadding="@dimen/_3sdp"
-                    android:layout_marginEnd="@dimen/_17sdp"
-                    android:text="7.8/10"
-                    android:textSize="@dimen/_8ssp"
-                    android:textColor="@color/white"
-                    android:fontFamily="@font/work_sans_vf"
-                    app:layout_constraintEnd_toEndOf="parent"
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_imdb_logo"
+                    android:layout_width="@dimen/_26sdp"
+                    android:layout_height="@dimen/_13sdp"
+                    android:src="@drawable/imdb"
+                    android:layout_marginEnd="@dimen/_50sdp"
                     app:layout_constraintBottom_toBottomOf="@id/tv_movie_view_4"
                     app:layout_constraintTop_toTopOf="@id/tv_movie_view_4"
+                    app:layout_constraintEnd_toEndOf="parent"
                     />
+                <TextView
+                    android:id="@+id/tv_imdb_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7.8/10"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:textSize="@dimen/_9ssp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/work_sans_vf"
+                    android:textFontWeight="400"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/iv_imdb_logo"
+                    app:layout_constraintTop_toTopOf="@id/iv_imdb_logo"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_imdb_logo"/>
 
                 <androidx.appcompat.widget.AppCompatImageButton
                     android:id="@+id/play_btn"

@@ -6,11 +6,11 @@
     android:background="@color/white">
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iv_select_cinema_3"
-        android:layout_width="@dimen/_17sdp"
-        android:layout_height="@dimen/_17sdp"
+        android:layout_width="@dimen/_26sdp"
+        android:layout_height="@dimen/_26sdp"
         android:layout_marginTop="@dimen/_12sdp"
         android:layout_marginStart="@dimen/_17sdp"
-        android:src="@color/black"
+        android:src="@drawable/cinema"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,7 +23,6 @@
         android:fontFamily="@font/work_sans_vf"
         android:textSize="@dimen/_13ssp"
         android:textColor="#161616"
-        app:layout_constraintTop_toTopOf="@id/iv_select_cinema_3"
         app:layout_constraintBottom_toBottomOf="@id/iv_select_cinema_3"
         app:layout_constraintStart_toEndOf="@id/iv_select_cinema_3"/>
 
