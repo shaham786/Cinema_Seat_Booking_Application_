@@ -62,7 +62,7 @@
                 android:layout_height="@dimen/_40sdp"
                 android:layout_marginTop="@dimen/_6sdp"
                 android:layout_marginEnd="@dimen/_17sdp"
-                android:background="@color/white"
+                android:background="@drawable/recyclerview_selector_drawable"
                 android:drawableRight="@drawable/dropdown"
                 android:fontFamily="@font/work_sans_vf"
                 android:gravity="center"
