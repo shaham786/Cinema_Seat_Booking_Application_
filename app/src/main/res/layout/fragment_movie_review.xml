@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="ui.fragment.MovieReviewFragment">
+    tools:context="ui.fragment.MovieReviewFragment"
+    android:background="@color/dark_grey">
 
 
 
@@ -465,9 +466,9 @@
                         android:fontFamily="@font/work_sans_vf"
                         android:padding="@dimen/_10sdp"
                         android:paddingEnd="@dimen/_30sdp"
-                        android:text="Enter promo here"
-                        android:textColor="@color/text_gray"
-                        android:textFontWeight="400"
+                        android:hint="Enter promo here"
+                        android:textColorHint="@color/text_gray"
+                        android:autofillHints="postalAddress"
                         app:layout_constraintEnd_toStartOf="@+id/appCompatButton"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -611,16 +612,6 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.core.widget.NestedScrollView>
-
-
-
-
-
-
-
-
-
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

@@ -47,6 +47,8 @@ class ViewMovieFragment1 : Fragment() {
         viewPager = binding.movieScrViewpager2
         tabLayout = binding.movieScrTabLayout
 
+        binding.ll2Schedule.visibility = View.GONE
+
 //        val navController = Navigation.findNavController(requireActivity(), R.id.nav)
 
         val fragments: ArrayList<Fragment> = arrayListOf(
@@ -55,19 +57,26 @@ class ViewMovieFragment1 : Fragment() {
         viewPager.adapter = ViewPager2Adapter(fragments, requireActivity())
         viewPager.offscreenPageLimit = 2
         tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+
             override fun onTabSelected(tab: TabLayout.Tab) {
+                binding.ll2Schedule.visibility = View.GONE
+
                 viewPager.currentItem = tab.position
                 when (tab.position) {
                     0 -> {
+                        binding.ll1Schedule.visibility = View.VISIBLE
                     }
                     1 -> {
+                        binding.ll2Schedule.visibility = View.VISIBLE
                     }
                 }
 
             }
 
-            override fun onTabUnselected(tab: TabLayout.Tab) {}
-            override fun onTabReselected(tab: TabLayout.Tab) {}
+            override fun onTabUnselected(tab: TabLayout.Tab) {
+            }
+            override fun onTabReselected(tab: TabLayout.Tab) {
+            }
         })
         viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
